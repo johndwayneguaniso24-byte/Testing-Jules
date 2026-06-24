@@ -1,108 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizVibe: Battle Edition</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="app">
-        <!-- Start Screen -->
-        <main id="start-screen" class="app-shell start-screen">
-            <div class="boss-preview">👻</div>
-            <p class="eyebrow">The Ultimate Challenge</p>
-            <h1>QuizVibe Battle</h1>
-            <p style="max-width: 600px; margin: 0 auto 32px; color: var(--on-surface-variant);">
-                Defeat the Code Wraith by answering questions correctly. Each correct answer deals damage, but mistakes will cost you HP!
-            </p>
-            <div style="display: flex; gap: 16px; justify-content: center;">
-                <button id="start-button" class="btn btn-primary">Enter the Arena</button>
-                <a href="https://github.com/s5condlast-cmd/Battle-of-wits" class="btn btn-ghost">GitHub</a>
-            </div>
-        </main>
-
-        <!-- Battle Screen -->
-        <main id="battle-screen" class="app-shell hidden">
-            <header class="battle-header">
-                <div class="hp-container">
-                    <div class="hp-label">
-                        <span>Hero</span>
-                        <span id="player-hp-text">100/100</span>
-                    </div>
-                    <div class="hp-bar-container">
-                        <div id="player-hp-fill" class="hp-fill"></div>
-                    </div>
-                </div>
-                <div id="round-badge" class="round-info">Round 1</div>
-                <div class="hp-container boss-hp">
-                    <div class="hp-label">
-                        <span>Code Wraith</span>
-                        <span id="boss-hp-text">100/100</span>
-                    </div>
-                    <div class="hp-bar-container">
-                        <div id="boss-hp-fill" class="hp-fill"></div>
-                    </div>
-                </div>
-            </header>
-
-            <section class="arena">
-                <div id="hero-fighter" class="card fighter-card">
-                    <div class="fighter-icon">🛡️</div>
-                    <div class="font-display" style="font-weight: 700;">You</div>
-                </div>
-                <div class="versus-badge">VS</div>
-                <div id="boss-fighter" class="card fighter-card">
-                    <div class="fighter-icon">👻</div>
-                    <div class="font-display" style="font-weight: 700;">Wraith</div>
-                </div>
-            </section>
-
-            <section id="question-area" class="card question-card">
-                <div class="w-full mb-8">
-                    <div class="flex justify-between items-center mb-2">
-                        <span id="progress-text" class="font-label-lg text-on-surface-variant">Question 1 of 10</span>
-                        <span id="progress-percent" class="font-label-lg text-primary font-bold">10%</span>
-                    </div>
-                    <div class="w-full h-2 bg-surface-low rounded-full overflow-hidden">
-                        <div id="progress-bar" class="h-full bg-gradient-to-r from-primary to-secondary rounded-full w-0 transition-all duration-500"></div>
-                    </div>
-                </div>
-                <div class="eyebrow">Question</div>
-                <h2 id="question-prompt" style="margin-bottom: 24px;">Question text goes here?</h2>
-                <div id="answer-grid" class="answer-grid">
-                    <!-- Answers injected here -->
-                </div>
-            </section>
-
-            <div id="battle-log" class="battle-log">
-                The Code Wraith is watching...
-            </div>
-        </main>
-
-        <!-- Result Screen -->
-        <main id="result-screen" class="app-shell hidden">
-            <div class="card" style="max-width: 600px; text-align: center;">
-                <p id="result-eyebrow" class="eyebrow">Battle Result</p>
-                <h1 id="result-title">Victory!</h1>
-                <p id="result-log" style="color: var(--on-surface-variant); margin-bottom: 32px;">Log message</p>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
-                    <div class="card" style="padding: 16px; background: var(--surface-low);">
-                        <div class="eyebrow">Hits</div>
-                        <h2 id="result-score">0</h2>
-                    </div>
-                    <div class="card" style="padding: 16px; background: var(--surface-low);">
-                        <div class="eyebrow">Rank</div>
-                        <h2 id="result-rank" style="font-size: 1.2rem;">Wanderer</h2>
-                    </div>
-                </div>
-                
-                <button id="restart-button" class="btn btn-primary" style="width: 100%;">Battle Again</button>
-            </div>
-        </main>
-    </div>
-    <script src="questions.js"></script>
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
