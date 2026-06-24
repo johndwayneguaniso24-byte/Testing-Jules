@@ -60,3 +60,5 @@ const questions = [
     correctIndex: 1,
   }
 ];
+
+export default questions;
